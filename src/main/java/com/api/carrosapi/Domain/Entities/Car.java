@@ -4,6 +4,8 @@ import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import lombok.Data;
 import javax.persistence.*;
 
@@ -21,5 +23,6 @@ public class Car {
     
     @ManyToOne
     @JoinColumn(name = "brandId")
+    @JsonBackReference
     private Brand brand;
 }

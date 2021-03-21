@@ -24,8 +24,8 @@ public class ICarService {
         return _carRepository.findAll();
     }
 
-    public Optional<Car> getById(Long id) {
-        return _carRepository.findById(id);
+    public Car getById(Long id) {
+        return _carRepository.findById(id).orElse(null);
     }
 
     public boolean update(Long id, Car car) {
