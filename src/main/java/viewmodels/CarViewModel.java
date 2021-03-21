@@ -5,6 +5,7 @@ import lombok.Data;
 
 @Data
 public class CarViewModel {
+    private Long id;
     private String name;
     private String color;
     private Double price;
@@ -12,6 +13,7 @@ public class CarViewModel {
     private BrandViewModel brand;
 
     public CarViewModel(Car car) {
+        this.id = car.getId();
         this.name = car.getName();
         this.color = car.getColor();
         this.price = car.getPrice();
